@@ -1,7 +1,7 @@
 # VLAN Filter #
 This is eBPF application to parse VXLAN packets and then extracts encapsulated VLAN packets to monitor traffic from each VLAN. Extracted packet header fields can be stored in a file or sent to remote server via Apache Kafka messaging system.
 
-Also part of this example is a simulation of a multi-host environment. Simulation environment can be setup by using test_setup.sh script. Then a sample script (traffic.sh) can be used to send traffic from one client (VLAN=100) from host1 talking to another client at host2 and one client (VLAN=200) from host2 talking to another client at host1 while running vlan_filter application in parallel.
+Also part of this example is a simulation of a multi-host environment. Simulation environment can be setup by using test_setup.sh script. Then a sample script (traffic.sh) can be used to send traffic from one client (VLAN=100) from host1 talking to another client at host2 and one client (VLAN=200) from host2 talking to another client at host1 while running vlan_filter application in parallel by using command 'python data-plane-tracing -i veth7'.
 
 ![picture](scenario.jpg)
 
